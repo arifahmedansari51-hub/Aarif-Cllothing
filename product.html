@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Details | Arif Clothing</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="top-nav">
+        <div class="logo">
+            <i class="fa-solid fa-shirt"></i>
+            <div>
+                <h2>Arif</h2>
+                <p>Clothing</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="product-details">
+
+    <div class="product-gallery">
+
+        <img src="images/product1.jpg" id="mainImage">
+
+        <div class="thumbs">
+
+            <img src="images/product1.jpg" onclick="changeImage(this)">
+            <img src="images/product2.jpg" onclick="changeImage(this)">
+            <img src="images/product3.jpg" onclick="changeImage(this)">
+            <img src="images/product4.jpg" onclick="changeImage(this)">
+
+        </div>
+
+    </div>
+
+    <div class="product-info">
+
+        <h1>Premium Oversized T-Shirt</h1>
+
+        <div class="rating">
+            ⭐⭐⭐⭐⭐ (4.8)
+        </div>
+
+        <h2>₹599 <span>₹999</span></h2>
+
+        <p class="save">40% OFF</p>
+
+        <h3>Select Size</h3>
+
+        <div class="sizes">
+
+            <button>S</button>
+            <button>M</button>
+            <button>L</button>
+            <button>XL</button>
+
+        </div>
+
+        <h3>Select Color</h3>
+
+        <div class="colors">
+
+            <span class="black"></span>
+            <span class="blue"></span>
+            <span class="red"></span>
+
+        </div>
+
+        <p class="stock">
+            <i class="fa-solid fa-circle-check"></i>
+            In Stock
+        </p>
+
+        <div class="buttons">
+
+            <button class="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Add to Cart
+            </button>
+
+            <button class="buy-btn">
+                Buy Now
+            </button>
+
+        </div>
+
+        <h3>Description</h3>
+
+        <p>
+            Premium quality oversized cotton T-shirt with breathable fabric,
+            soft finish and modern fit.
+        </p>
+
+    </div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>

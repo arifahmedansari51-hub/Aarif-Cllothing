@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard | Arif Clothing</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="admin">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <h2>Arif Clothing</h2>
+
+        <ul>
+
+            <li><i class="fa-solid fa-chart-line"></i> Dashboard</li>
+
+            <li><i class="fa-solid fa-box"></i> Products</li>
+
+            <li><i class="fa-solid fa-cart-shopping"></i> Orders</li>
+
+            <li><i class="fa-solid fa-users"></i> Customers</li>
+
+            <li><i class="fa-solid fa-gear"></i> Settings</li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="admin-content">
+
+        <h1>Dashboard</h1>
+
+        <div class="cards">
+
+            <div class="card">
+                <h2>120</h2>
+                <p>Products</p>
+            </div>
+
+            <div class="card">
+                <h2>55</h2>
+                <p>Orders</p>
+            </div>
+
+            <div class="card">
+                <h2>210</h2>
+                <p>Customers</p>
+            </div>
+
+            <div class="card">
+                <h2>₹58,250</h2>
+                <p>Total Sales</p>
+            </div>
+
+        </div>
+
+        <div class="product-table">
+
+            <div class="table-header">
+
+                <h2>Products</h2>
+
+                <button onclick="showForm()">+ Add Product</button>
+
+            </div>
+
+            <table>
+
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                    <th>Action</th>
+                </tr>
+
+                <tbody id="productTable"></tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

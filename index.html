@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arif Clothing</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="header">
+    
+
+<div class="top-nav">
+
+<div class="logo">
+<i class="fa-solid fa-shirt"></i>
+<div>
+<h2>Arif</h2>
+<p>Clothing</p>
+</div>
+</div>
+
+<div class="search-box">
+<input
+type="text"
+id="searchInput"
+placeholder="Search for products..."
+onkeyup="searchProducts()">
+<i class="fa-solid fa-magnifying-glass"></i>
+
+<input type="text"
+placeholder="Search for T-Shirts, Shoes, Bags & More">
+
+</div>
+
+
+<div class="nav-icons">
+
+<div class="item">
+<i class="fa-regular fa-user"></i>
+<span>Login</span>
+</div>
+
+<div class="item">
+<i class="fa-regular fa-heart"></i>
+<span>Wishlist</span>
+</div>
+
+<div class="item">
+<i class="fa-solid fa-cart-shopping"></i>
+<span>Cart</span>
+</div>
+
+
+</div>
+<div class="menu-toggle" onclick="toggleMenu()">
+    <i class="fa-solid fa-bars"></i>
+    <nav class="nav-menu" id="navMenu">
+
+    <a href="index.html">Home</a>
+    <a href="products.html">Shop</a>
+    <a href="#">Men</a>
+    <a href="#">Women</a>
+    <a href="#">Kids</a>
+    <a href="#">Footwear</a>
+    <a href="#">Contact</a>
+
+</nav>
+    
+</div>
+
+
+</div>
+
+<!-- Categories -->
+
+<div class="menu">
+
+<a href="#">Men</a>
+
+<a href="#">Women</a>
+
+<a href="#">Kids</a>
+
+<a href="#">Footwear</a>
+
+<a href="#">Bags</a>
+
+<a href="#">Accessories</a>
+
+<a href="#">New Arrivals</a>
+
+<a href="#">Sale</a>
+
+</div>
+
+</header>
+
+<!-- ================= HERO SLIDER ================= -->
+
+<section class="slider">
+
+    <div class="slides fade">
+        <img src="images/banner1.png" alt="">
+    </div>
+
+    <div class="slides fade">
+        <img src="images/banner2.png" alt="">
+    </div>
+
+    <div class="slides fade">
+        <img src="images/banner3.png" alt="">
+    </div>
+
+    <button class="prev" onclick="changeSlide(-1)">❮</button>
+    <button class="next" onclick="changeSlide(1)">❯</button>
+
+</section>
+<!-- ================= SHOP BY CATEGORY ================= -->
+
+<section class="category-section">
+
+    <h2>Shop by Category</h2>
+
+    <div class="category-container">
+
+        <div class="category-card">
+            <img src="images/men.jpg" alt="">
+            <h3>Men</h3>
+        </div>
+
+        <div class="category-card">
+            <img src="images/women.jpg" alt="">
+            <h3>Women</h3>
+        </div>
+
+        <div class="category-card">
+            <img src="images/kids.jpg" alt="">
+            <h3>Kids</h3>
+        </div>
+
+        <div class="category-card">
+            <img src="images/shoes.jpg" alt="">
+            <h3>Footwear</h3>
+        </div>
+
+        <div class="category-card">
+            <img src="images/bags.jpg" alt="">
+            <h3>Bags</h3>
+        </div>
+
+        <div class="category-card">
+            <img src="images/accessories.jpg" alt="">
+            <h3>Accessories</h3>
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= FEATURED PRODUCTS ================= -->
+
+<section class="featured-products">
+
+    <div class="section-title">
+        <h2>🔥 Featured Products</h2>
+        <a href="#">View All</a>
+    </div>
+
+    <div class="product-grid">
+        <p id="notFound" style="display:none">
+No Product Found
+</p>
+
+        <!-- Product 1 -->
+        <div class="product-card searchable" 
+                    data-name="premium t shirt">
+
+            <span class="discount">-40%</span>
+
+            <i class="fa-regular fa-heart wishlist"
+
+onclick="addToWishlist(
+'Premium T-Shirt',
+599,
+'images/product1.jpg'
+)">
+
+</i>
+
+            <img src="images/product1.jpg" alt="">
+
+            <h3>Men's Premium T-Shirt</h3>
+
+            <div class="rating">
+                ⭐⭐⭐⭐⭐ <span>(125)</span>
+            </div>
+
+            <p class="price">
+                ₹599
+                <span>₹999</span>
+            </p>
+
+            <button onclick="addToCart(
+'Premium T-Shirt',
+599,
+'images/product1.jpg'
+)">
+Add to Cart
+</button>
+
+        </div>
+
+        <!-- Product 2 -->
+
+        <div class="product-card searchable"
+                    data-name="hoodie">
+
+            <span class="discount">-55%</span>
+
+            <i class="fa-regular fa-heart wishlist"
+
+onclick="addToWishlist(
+'hoodie',
+599,
+'images/product1.jpg'
+)">
+
+</i>
+
+            <img src="images/product2.jpg" alt="">
+
+            <h3>Women's Hoodie</h3>
+
+            <div class="rating">
+                ⭐⭐⭐⭐⭐ <span>(86)</span>
+            </div>
+
+            <p class="price">
+                ₹899
+                <span>₹1999</span>
+            </p>
+
+            <button onclick="addToCart(
+'hoodie',
+599,
+'images/product1.jpg'
+)">
+Add to Cart
+</button>
+
+        </div>
+
+        <!-- Product 3 -->
+
+        <div class="product-card searchable"
+                    data-name="running shoes">
+
+            <span class="discount">-30%</span>
+
+            <i class="fa-regular fa-heart wishlist"
+
+onclick="addToWishlist(
+'running shoes',
+599,
+'images/product1.jpg'
+)">
+
+</i>
+
+            <img src="images/product3.jpg" alt="">
+
+            <h3>Running Shoes</h3>
+
+            <div class="rating">
+                ⭐⭐⭐⭐☆ <span>(215)</span>
+            </div>
+
+            <p class="price">
+                ₹1499
+                <span>₹2199</span>
+            </p>
+
+            <button onclick="addToCart(
+'running shoes',
+599,
+'images/product1.jpg'
+)">
+Add to Cart
+</button>
+
+        </div>
+
+        <!-- Product 4 -->
+
+        <div class="product-card searchable"
+                    data-name="backpack">
+
+            <span class="discount">-45%</span>
+
+            <i class="fa-regular fa-heart wishlist"
+
+onclick="addToWishlist(
+'backpack',
+599,
+'images/product1.jpg'
+)">
+
+</i>
+
+            <img src="images/product4.jpg" alt="">
+
+            <h3>Leather Backpack</h3>
+
+            <div class="rating">
+                ⭐⭐⭐⭐⭐ <span>(96)</span>
+            </div>
+
+            <p class="price">
+                ₹1299
+                <span>₹2399</span>
+            </p>
+
+           <button onclick="addToCart(
+'backpack',
+599,
+'images/product1.jpg'
+)">
+Add to Cart
+</button>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= FLASH SALE ================= -->
+
+<section class="flash-sale">
+
+    <div class="flash-header">
+
+        <div>
+            <h2>⚡ Flash Sale</h2>
+            <p>Hurry! Offer ends in</p>
+        </div>
+
+        <div id="countdown">
+            <span id="hours">00</span> :
+            <span id="minutes">00</span> :
+            <span id="seconds">00</span>
+        </div>
+
+    </div>
+
+    <div class="flash-products">
+
+        <div class="flash-card">
+            <img src="images/flash1.jpg" alt="">
+            <h3>Premium Hoodie</h3>
+            <h4>₹999 <span>₹1999</span></h4>
+            <button onclick="addToCart(
+'Premium Hoodie',
+599,
+'images/product1.jpg'
+)">
+Add to Cart
+</button>
+        </div>
+
+        <div class="flash-card">
+            <img src="images/flash2.jpg" alt="">
+            <h3>Sports Shoes</h3>
+            <h4>₹1499 <span>₹2499</span></h4>
+            <button onclick="addToCart(
+'Sports Shoes',
+599,
+'images/product1.jpg'
+)">
+Add to Cart
+</button>
+        </div>
+
+        <div class="flash-card">
+            <img src="images/flash3.jpg" alt="">
+            <h3>Leather Bag</h3>
+            <h4>₹1299 <span>₹2199</span></h4>
+            <button onclick="addToCart(
+'Leather Bag',
+599,
+'images/product1.jpg'
+)">
+Add to Cart
+</button>
+        </div>
+
+        <div class="flash-card">
+            <img src="images/flash4.jpg" alt="">
+            <h3>Casual T-Shirt</h3>
+            <h4>₹499 <span>₹899</span></h4>
+            <button onclick="addToCart(
+'Premium T-Shirt',
+599,
+'images/product1.jpg'
+)">
+Add to Cart
+</button>
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= BEST SELLERS ================= -->
+
+<section class="best-sellers">
+
+    <div class="section-title">
+        <h2>🔥 Best Sellers</h2>
+        <a href="#">View All</a>
+    </div>
+
+    <div class="seller-grid">
+
+        <div class="seller-card">
+            <img src="images/best1.jpg" alt="">
+            <h3>Classic Denim Jacket</h3>
+            <p>₹1,499</p>
+           <button onclick="addToCart(
+'Premium T-Shirt',
+599,
+'images/product1.jpg'
+)">
+Add to Cart
+</button>
+        </div>
+
+        <div class="seller-card">
+            <img src="images/best2.jpg" alt="">
+            <h3>Casual Sneakers</h3>
+            <p>₹2,199</p>
+            <button onclick="addToCart(
+'Premium T-Shirt',
+599,
+'images/product1.jpg'
+)">
+Add to Cart
+</button>
+        </div>
+
+        <div class="seller-card">
+            <img src="images/best3.jpg" alt="">
+            <h3>Women's Handbag</h3>
+            <p>₹999</p>
+            <button onclick="addToCart(
+'Premium T-Shirt',
+599,
+'images/product1.jpg'
+)">
+Add to Cart
+</button>
+        </div>
+
+        <div class="seller-card">
+            <img src="images/best4.jpg" alt="">
+            <h3>Printed Hoodie</h3>
+            <p>₹1,299</p>
+            <button onclick="addToCart(
+'Premium T-Shirt',
+599,
+'images/product1.jpg'
+)">
+Add to Cart
+</button>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= NEWSLETTER ================= -->
+
+<section class="newsletter">
+
+    <h2>Stay Updated</h2>
+
+    <p>Subscribe to receive new arrivals and exclusive offers.</p>
+
+    <form>
+        <input type="email" placeholder="Enter your email">
+        <button type="submit">Subscribe</button>
+    </form>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div>
+            <h3>Arif Clothing</h3>
+            <p>Your trusted online fashion store for premium clothing, footwear and accessories.</p>
+        </div>
+
+        <div>
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Women</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Customer Service</h3>
+            <ul>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Follow Us</h3>
+
+            <div class="social-icons">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-x-twitter"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+        © 2026 Arif Clothing. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+</body>
+</html>

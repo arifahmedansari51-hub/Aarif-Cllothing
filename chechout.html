@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout | Arif Clothing</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="top-nav">
+        <div class="logo">
+            <i class="fa-solid fa-shirt"></i>
+            <div>
+                <h2>Arif</h2>
+                <p>Clothing</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="checkout">
+
+    <!-- Address Form -->
+
+    <div class="address-box">
+
+        <h2>Delivery Address</h2>
+
+        <form id="checkoutForm">
+
+            <input type="text" placeholder="Full Name" required>
+
+            <input type="tel" placeholder="Mobile Number" required>
+
+            <input type="email" placeholder="Email Address">
+
+            <textarea placeholder="Full Address" rows="4" required></textarea>
+
+            <div class="row">
+
+                <input type="text" placeholder="City" required>
+
+                <input type="text" placeholder="State" required>
+
+            </div>
+
+            <div class="row">
+
+                <input type="text" placeholder="PIN Code" required>
+
+                <input type="text" placeholder="Country" value="India">
+
+            </div>
+
+            <h3>Payment Method</h3>
+
+            <label><input type="radio" name="pay" checked> Cash on Delivery</label>
+
+            <label><input type="radio" name="pay"> UPI</label>
+
+            <label><input type="radio" name="pay"> Debit / Credit Card</label>
+
+            <label><input type="radio" name="pay"> Net Banking</label>
+
+            <button type="submit">Place Order</button>
+
+        </form>
+
+    </div>
+
+    <!-- Order Summary -->
+
+    <div class="checkout-summary">
+
+        <h2>Order Summary</h2>
+
+        <div class="summary-item">
+            <span>Premium T-Shirt ×1</span>
+            <span>₹599</span>
+        </div>
+
+        <div class="summary-item">
+            <span>Men's Hoodie ×1</span>
+            <span>₹999</span>
+        </div>
+
+        <hr>
+
+        <div class="summary-item">
+            <span>Subtotal</span>
+           <span id="subtotal">₹0</span>
+        </div>
+
+        <div class="summary-item">
+            <span>Delivery</span>
+            <span>FREE</span>
+        </div>
+
+        <div class="summary-item">
+            <span>Discount</span>
+            <span>-₹200</span>
+        </div>
+
+        <hr>
+
+        <div class="summary-total">
+            <span>Total</span>
+            <span>₹1398</span>
+        </div>
+
+    </div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
